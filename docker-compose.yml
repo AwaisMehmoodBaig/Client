@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client:
+    build:
+      context: E:\Dicecamp\Devops\final project\part 1\Client
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    volumes:
+      - clientvol:/clientdata
+    depends_on:
+      - server
+    networks:
+      - default
